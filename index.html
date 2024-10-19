@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Google Developer Groups on Campus: IFHE</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="bg-white text-primary p-3 shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+        <img src="logo.png" alt="GDG Logo" class="logo" style="height: 50px;">
+        <span class="font-weight-bold" style="font-size: 1.8rem;">Google Developer Groups on Campus: IFHE</span>
+        <div class="navbar-links">
+            <a href="#leaderboard" class="btn btn-outline-primary">Leaderboard</a>
+        </div>
+    </div>
+</header>
+
+<!-- Scrolling Notice -->
+<div class="scrolling-notice bg-warning text-dark text-center py-2">
+    <marquee behavior="scroll" direction="left">
+        📢 Notice: The deadline for the Gen AI Study Jam is November 1st! Don't miss it!
+    </marquee>
+</div>
+
+<!-- Leaderboard Table -->
+<div class="container my-4">
+    <h2 class="text-primary text-center">GEN AI STUDY JAM LEADER BOARD</h2>
+    
+    <div class="row my-4">
+        <div class="col-md-6">
+            <div class="info-box bg-light border border-primary p-3 text-primary font-weight-bold" id="badgesCompleted">
+                People Completed All 15 Badges: 0
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="info-box bg-light border border-primary p-3 text-primary font-weight-bold" id="gamesCompleted">
+                People Completed Arcade Game: 0
+            </div>
+        </div>
+    </div>
+    
+    <!-- Search Input -->
+    <div class="form-group text-center">
+        <input type="text" class="form-control d-inline-block" id="searchInput" placeholder="Search by Name" onkeyup="filterTable()" style="border: 1px solid #004d99; width: 50%;">
+    </div>
+    
+    <table id="leaderboard" class="table table-bordered">
+        <thead class="thead-dark" style="background-color: #004d99; color: white;">
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Access Code Redemption</th>
+                <th>All Skill Badges & Games Completed</th>
+                <th>No. of Skill Badges Completed</th>
+                <th>No. of Arcade Games Completed</th>
+                <th>Special Badges</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- This will be populated dynamically by JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<footer class="text-center p-3 bg-white">
+    <img src="logo.png" alt="GDG Logo" width="100">
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
